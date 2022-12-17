@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6em;
+  width: 100vw;
+}
+.header-navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+.header-navbar ul a {
+  text-decoration: none;
+  color: hsl(236deg, 13%, 42%);
+  transition: 0.2s;
+}
+.header-navbar ul a:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+.header-hamburguer {
+  z-index: 10;
+  display: none;
+}
+
+.main {
+  margin-top: 2em;
+  display: flex;
+  padding: 0 12em;
+}
+
+.section {
+  width: 53vw;
+}
+.section-image {
+  width: 44em;
+}
+.section-text {
+  margin-top: 1em;
+  display: flex;
+}
+.section-text h1 {
+  width: 9em;
+  font-size: 3em;
+  font-weight: bold;
+}
+.section-subtext {
+  color: hsl(236deg, 13%, 42%);
+  width: 80%;
+}
+
+.button {
+  cursor: pointer;
+  margin-top: 2.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(5deg, 85%, 63%);
+  width: 10em;
+  height: 3em;
+  transition: 0.2s;
+}
+.button:hover {
+  background-color: hsl(240deg, 100%, 5%);
+}
+.button a {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.aside {
+  position: relative;
+  height: 100%;
+  padding: 1em;
+  background-color: hsl(240deg, 100%, 5%);
+  margin-left: 2em;
+}
+.aside h2 {
+  color: hsl(35deg, 77%, 62%);
+}
+
+.first-news, .second-news, .third-news {
+  padding-bottom: 1em;
+  border-bottom: 1px solid hsl(233deg, 8%, 79%);
+  margin-top: 1em;
+}
+.first-news h3, .second-news h3, .third-news h3 {
+  cursor: pointer;
+  font-size: 0.8em;
+  color: #fff;
+}
+.first-news h3:hover, .second-news h3:hover, .third-news h3:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+.first-news p, .second-news p, .third-news p {
+  font-size: 0.7em;
+  margin-top: 0.5em;
+  color: hsl(233deg, 8%, 79%);
+}
+
+.third-news {
+  border: none;
+}
+
+.second-news h3 {
+  font-size: 0.7em;
+}
+
+footer {
+  display: flex;
+  width: 100vw;
+  margin-top: 5em;
+  padding: 0 12em;
+}
+
+.first-article, .second-article, .third-article {
+  display: flex;
+  margin-right: 1em;
+  margin-bottom: 3em;
+}
+.first-article img, .second-article img, .third-article img {
+  margin-right: 1em;
+  width: 120px;
+  height: 160px;
+}
+.first-article h4, .second-article h4, .third-article h4 {
+  margin-bottom: 0.3em;
+  font-size: 1.6em;
+  color: hsl(233deg, 8%, 79%);
+}
+.first-article h5, .second-article h5, .third-article h5 {
+  cursor: pointer;
+  margin-bottom: 0.3em;
+  font-size: 1em;
+  font-weight: 800;
+}
+.first-article h5:hover, .second-article h5:hover, .third-article h5:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+.first-article p, .second-article p, .third-article p {
+  font-size: 1em;
+  width: 100%;
+  color: hsl(236deg, 13%, 42%);
+}
+
+@media (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+    padding: 0;
+  }
+  .header {
+    width: 100vw;
+    justify-content: space-between;
+    padding: 0 1em;
+  }
+  .header-hamburguer {
+    z-index: 11;
+    display: block;
+  }
+  .header-navbar {
+    position: fixed;
+    z-index: 10;
+    background: hsl(36deg, 100%, 99%);
+    height: 100vh;
+    bottom: 0;
+    width: 60vw;
+    padding: 7em 1em;
+    right: -100%;
+  }
+  .header-navbar ul {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .header-navbar ul a {
+    color: #000;
+    font-weight: 400;
+  }
+  .navbarOpen {
+    right: 0;
+  }
+  .main {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .section-image {
+    width: 96vw;
+  }
+  .section-text {
+    flex-direction: column;
+  }
+  .section-text h1 {
+    width: 96vw;
+  }
+  .section-subtext p {
+    margin: 0;
+    width: 96vw;
+  }
+  .button {
+    margin-top: 1em;
+    margin-bottom: 3em;
+  }
+  .aside {
+    margin: 0;
+    width: 96vw;
+  }
+  footer {
+    padding: 0 1em;
+    flex-direction: column;
+  }
+  .opacity.true {
+    position: fixed;
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
